@@ -8,9 +8,12 @@ def show_image(image, title='Image'):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+# Get the directory path of the current script file
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Set the paths for the input and output directories
-input_dir = r"C:/Users/laksh/Desktop/Image_croper"
-output_dir = r"C:/Users/laksh/Desktop/Image_croper/cropped"
+input_dir = os.path.join(current_dir, 'input_dir')
+output_dir = os.path.join(current_dir, "cropped_dir")
 
 # Make sure the output directory exists
 if not os.path.exists(output_dir):
